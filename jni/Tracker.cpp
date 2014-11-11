@@ -7,6 +7,7 @@ namespace Apps
     /**
      * get HS only Histogram from IplImage
      */
+     // The template is being created here by creating a histogram
     void getHSHist(Mat& img, MatND& hist) {
         // Compute HSV image and separate into colors
         Mat hsv;
@@ -30,6 +31,7 @@ namespace Apps
     /**
      * find rectangle which represents the marker by histogram from image
      */
+     // Rectangle around the hand based on what is found from the historgram
     Rect findMarker (Mat& img, MatND& hist, int* find) {
         Mat hsv;
         cvtColor(img, hsv, CV_BGR2HSV);
